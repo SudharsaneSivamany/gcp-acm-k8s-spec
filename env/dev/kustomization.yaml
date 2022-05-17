@@ -39,8 +39,8 @@ patches:
     - op: replace
       path: /subjects/0
       value:
-        kind: User
-        name: guptavasu@google.com
+        kind: Group
+        name: rbac-poc-group@niranjankltest.joonix.net
         apiGroup: rbac.authorization.k8s.io
         namespace: development
     - op: replace
