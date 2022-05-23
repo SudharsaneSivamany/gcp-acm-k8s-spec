@@ -1,7 +1,7 @@
 namespace: development
 
 resources:
-- ../../base
+- ../../../base
 
 
 patches:
