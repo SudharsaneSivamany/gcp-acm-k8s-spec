@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- env/dev/pod_admin
+- env/production/pod_admin
+- env/testing/pod_admin

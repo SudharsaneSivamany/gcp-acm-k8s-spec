@@ -1,0 +1,52 @@
+namespace: testing
+
+resources:
+- ../../../base
+
+
+patches:
+- target:
+    kind: Namespace
+    name: default
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: testing
+- target:
+    kind: Role
+    name: pod-reader
+  patch: |-
+    - op: replace
+      path: /metadata
+      value: 
+        name: pod_role
+        namespace: testing
+    - op: replace
+      path: /rules/0
+      value:  
+        apiGroups: ["*"] # "" indicates the core API group
+        resources: ["pods", "deployments"]
+        verbs: ["get", "watch", "list"]
+- target:
+    kind: RoleBinding
+    name: read-pods
+  patch: |-
+    - op: replace
+      path: /metadata
+      value:
+        name: pod_admin
+        namespace: testing
+    - op: replace
+      path: /subjects/0
+      value:
+        kind: User
+        name: guptavasu@google.com
+        apiGroup: rbac.authorization.k8s.io
+        namespace: testing
+    - op: replace
+      path: /roleRef
+      value:
+        kind: Role 
+        name: pod_role  
+        apiGroup: rbac.authorization.k8s.io
+
