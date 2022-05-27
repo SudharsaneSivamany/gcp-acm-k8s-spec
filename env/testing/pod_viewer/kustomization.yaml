@@ -25,7 +25,7 @@ patches:
       path: /rules/0
       value:  
         apiGroups: ["*"] # "" indicates the core API group
-        resources: ["pods/exec", "pods/log"]
+        resources: ["pods"]
         verbs: ["get", "watch", "list", "create"]
 - target:
     kind: RoleBinding
