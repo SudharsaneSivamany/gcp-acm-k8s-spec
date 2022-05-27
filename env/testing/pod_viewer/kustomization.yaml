@@ -22,15 +22,12 @@ patches:
         name: pod_role
         namespace: testing
     - op: replace
-      path: /rules/0
+      path: /rules/
       value:  
-        apiGroups: ["*"] # "" indicates the core API group
+      - apiGroups: ["*"] # "" indicates the core API group
         resources: ["pods", "pods/log"]
         verbs: ["get", "watch", "list"]
-    - op: replace
-      path: /rules/1
-      value:
-        apiGroups: ["*"]
+      - apiGroups: ["*"]
         resources: ["pods/exec"]
         verbs: ["create"]
 - target:
