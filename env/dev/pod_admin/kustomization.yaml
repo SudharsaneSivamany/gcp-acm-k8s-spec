@@ -25,7 +25,7 @@ patches:
       path: /rules/0
       value:  
         apiGroups: ["*"] # "" indicates the core API group
-        resources: ["pods"]
+        resources: ["*"]
         verbs: ["get", "watch", "list"]
 - target:
     kind: RoleBinding
@@ -39,8 +39,8 @@ patches:
     - op: replace
       path: /subjects/0
       value:
-        kind: Group
-        name: rbac-poc-group@niranjankltest.joonix.net
+        kind: User
+        name: guptavasu@google.com
         apiGroup: rbac.authorization.k8s.io
         namespace: development
     - op: replace
