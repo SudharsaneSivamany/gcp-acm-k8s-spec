@@ -22,7 +22,7 @@ patches:
         name: pod_role
         namespace: testing
     - op: replace
-      path: /rules/
+      path: /rules
       value:  
       - apiGroups: ["*"] # "" indicates the core API group
         resources: ["pods", "pods/log"]
