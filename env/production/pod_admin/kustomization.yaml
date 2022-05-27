@@ -25,8 +25,8 @@ patches:
       path: /rules/0
       value:  
         apiGroups: ["*"] # "" indicates the core API group
-        resources: ["pods"]
-        verbs: ["get", "watch", "list"]
+        resources: ["*"]
+        verbs: ["get", "watch", "list", "create", "udpate", "delete", "patch"]
 - target:
     kind: RoleBinding
     name: read-pods

@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - env/dev/pod_admin
 - env/production/pod_admin
-- env/testing/pod_admin
+- env/testing/pod_viewer

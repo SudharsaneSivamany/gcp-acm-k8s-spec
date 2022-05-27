@@ -1,8 +1,0 @@
-apiVersion:  skaffold/v2beta16
-kind: Config
-deploy:
- kustomize: 
-  paths:
-  - env/dev/pod_admin
-  - env/production/pod_admin
-  - env/testing/pod_admin
