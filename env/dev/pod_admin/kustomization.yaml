@@ -19,7 +19,7 @@ patches:
     - op: replace
       path: /metadata
       value: 
-        name: pod_role
+        name: dev_reader_role
         namespace: development
     - op: replace
       path: /rules/0
@@ -34,13 +34,13 @@ patches:
     - op: replace
       path: /metadata
       value:
-        name: pod_admin
+        name: dev_reader
         namespace: development
     - op: replace
       path: /subjects/0
       value:
-        kind: User
-        name: guptavasu@google.com
+        kind: Group
+        name: rbac-poc-group@niranjankltest.joonix.net
         apiGroup: rbac.authorization.k8s.io
         namespace: development
     - op: replace
