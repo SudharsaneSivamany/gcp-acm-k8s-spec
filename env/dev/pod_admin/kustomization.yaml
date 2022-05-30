@@ -19,7 +19,7 @@ patches:
     - op: replace
       path: /metadata
       value: 
-        name: dev_reader_role
+        name: dev_reader
         namespace: development
     - op: replace
       path: /rules/0
@@ -34,7 +34,7 @@ patches:
     - op: replace
       path: /metadata
       value:
-        name: dev_reader
+        name: dev_readers
         namespace: development
     - op: replace
       path: /subjects/0
@@ -47,6 +47,6 @@ patches:
       path: /roleRef
       value:
         kind: Role 
-        name: dev_reader_role  
+        name: dev_reader  
         apiGroup: rbac.authorization.k8s.io
 
