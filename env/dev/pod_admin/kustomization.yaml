@@ -47,6 +47,6 @@ patches:
       path: /roleRef
       value:
         kind: Role 
-        name: pod_role  
+        name: dev_reader_role  
         apiGroup: rbac.authorization.k8s.io
 
